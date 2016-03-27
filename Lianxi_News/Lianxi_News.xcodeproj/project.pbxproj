@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		8005B9AF1CA6DA350025FAE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8005B9AE1CA6DA350025FAE9 /* main.m */; };
 		8005B9B21CA6DA350025FAE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8005B9B11CA6DA350025FAE9 /* AppDelegate.m */; };
-		8005B9B51CA6DA350025FAE9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8005B9B41CA6DA350025FAE9 /* ViewController.m */; };
-		8005B9B81CA6DA350025FAE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8005B9B61CA6DA350025FAE9 /* Main.storyboard */; };
 		8005B9BA1CA6DA350025FAE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8005B9B91CA6DA350025FAE9 /* Assets.xcassets */; };
 		8005B9BD1CA6DA350025FAE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8005B9BB1CA6DA350025FAE9 /* LaunchScreen.storyboard */; };
+		8005B9CB1CA7B9910025FAE9 /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8005B9CA1CA7B9910025FAE9 /* NewsTableViewController.m */; };
+		8005B9CD1CA7B9BF0025FAE9 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8005B9CC1CA7B9BF0025FAE9 /* News.storyboard */; };
+		8005B9D01CA7C1740025FAE9 /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8005B9CF1CA7C1740025FAE9 /* NewsModel.m */; };
 		AA6499F5169AFEB09DCE0436 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9DAAC788BC440001B8948D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -22,12 +23,14 @@
 		8005B9AE1CA6DA350025FAE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8005B9B01CA6DA350025FAE9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8005B9B11CA6DA350025FAE9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8005B9B31CA6DA350025FAE9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8005B9B41CA6DA350025FAE9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8005B9B71CA6DA350025FAE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8005B9B91CA6DA350025FAE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8005B9BC1CA6DA350025FAE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8005B9BE1CA6DA350025FAE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8005B9C91CA7B9910025FAE9 /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
+		8005B9CA1CA7B9910025FAE9 /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
+		8005B9CC1CA7B9BF0025FAE9 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		8005B9CE1CA7C1740025FAE9 /* NewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
+		8005B9CF1CA7C1740025FAE9 /* NewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsModel.m; sourceTree = "<group>"; };
 		C65271DA232CC58D8F751BB5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EC9DAAC788BC440001B8948D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,11 +77,9 @@
 		8005B9AC1CA6DA350025FAE9 /* Lianxi_News */ = {
 			isa = PBXGroup;
 			children = (
+				8005B9C41CA7B9080025FAE9 /* Classes */,
 				8005B9B01CA6DA350025FAE9 /* AppDelegate.h */,
 				8005B9B11CA6DA350025FAE9 /* AppDelegate.m */,
-				8005B9B31CA6DA350025FAE9 /* ViewController.h */,
-				8005B9B41CA6DA350025FAE9 /* ViewController.m */,
-				8005B9B61CA6DA350025FAE9 /* Main.storyboard */,
 				8005B9B91CA6DA350025FAE9 /* Assets.xcassets */,
 				8005B9BB1CA6DA350025FAE9 /* LaunchScreen.storyboard */,
 				8005B9BE1CA6DA350025FAE9 /* Info.plist */,
@@ -93,6 +94,42 @@
 				8005B9AE1CA6DA350025FAE9 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8005B9C41CA7B9080025FAE9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8005B9C81CA7B95D0025FAE9 /* Home */,
+				8005B9C71CA7B9490025FAE9 /* Tools */,
+				8005B9C51CA7B9140025FAE9 /* News */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		8005B9C51CA7B9140025FAE9 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				8005B9CC1CA7B9BF0025FAE9 /* News.storyboard */,
+				8005B9C91CA7B9910025FAE9 /* NewsTableViewController.h */,
+				8005B9CA1CA7B9910025FAE9 /* NewsTableViewController.m */,
+				8005B9CE1CA7C1740025FAE9 /* NewsModel.h */,
+				8005B9CF1CA7C1740025FAE9 /* NewsModel.m */,
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
+		8005B9C71CA7B9490025FAE9 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		8005B9C81CA7B95D0025FAE9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 		8F5857999C98E8C971CF9A32 /* Frameworks */ = {
@@ -165,8 +202,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8005B9BD1CA6DA350025FAE9 /* LaunchScreen.storyboard in Resources */,
+				8005B9CD1CA7B9BF0025FAE9 /* News.storyboard in Resources */,
 				8005B9BA1CA6DA350025FAE9 /* Assets.xcassets in Resources */,
-				8005B9B81CA6DA350025FAE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8005B9B51CA6DA350025FAE9 /* ViewController.m in Sources */,
+				8005B9D01CA7C1740025FAE9 /* NewsModel.m in Sources */,
+				8005B9CB1CA7B9910025FAE9 /* NewsTableViewController.m in Sources */,
 				8005B9B21CA6DA350025FAE9 /* AppDelegate.m in Sources */,
 				8005B9AF1CA6DA350025FAE9 /* main.m in Sources */,
 			);
@@ -234,14 +272,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8005B9B61CA6DA350025FAE9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8005B9B71CA6DA350025FAE9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8005B9BB1CA6DA350025FAE9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
