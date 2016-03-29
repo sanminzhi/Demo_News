@@ -7,17 +7,31 @@
 //
 
 #import "NewsTableViewController.h"
+#import "NewsModel.h"
+#import "NewsCell.h"
+//#import <AFNetworking.h>
 
 @interface NewsTableViewController ()
-
+@property(nonatomic,strong)NSArray * newsList;
 @end
 
 @implementation NewsTableViewController
 
+-(void)setNewsList:(NSArray *)newsList{
+    _newsList = newsList;
+    //刷新表格
+    [self.tableView reloadData];
+    [self addObserver:self forKeyPath:@"highlighted" options:0 context:nil]; 
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
+//    NSString *urlString = @"T1348647853363/0-20.html";
+    __weak typeof(self) weakSelf = self;
+    [NewsModel loadNewsListWithURLString:@"T1348647853363/0-20.html" finished:^(NSArray *newList) {
+        weakSelf.newsList = newList;
+    }];
+    NSLog(@"%@",self.newsList);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,25 +41,23 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.newsList.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    NewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DefaultCell"];
+    if (cell == nil) {
+        //注册cell
+      cell = [[NewsCell alloc]initWithStyle: UITableViewCellStyleDefault reuseIdentifier:@"DefaultCell"];
+    }
+
+    cell.model = self.newsList[indexPath.row];
+    NSLog(@"%@",cell);
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

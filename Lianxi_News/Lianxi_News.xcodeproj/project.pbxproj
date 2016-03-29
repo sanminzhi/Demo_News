@@ -14,6 +14,9 @@
 		8005B9CB1CA7B9910025FAE9 /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8005B9CA1CA7B9910025FAE9 /* NewsTableViewController.m */; };
 		8005B9CD1CA7B9BF0025FAE9 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8005B9CC1CA7B9BF0025FAE9 /* News.storyboard */; };
 		8005B9D01CA7C1740025FAE9 /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8005B9CF1CA7C1740025FAE9 /* NewsModel.m */; };
+		8005B9D31CA9219B0025FAE9 /* NetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8005B9D21CA9219B0025FAE9 /* NetworkTools.m */; };
+		8005B9D71CA92EE00025FAE9 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 8005B9D51CA92EE00025FAE9 /* NSArray+Log.m */; };
+		802E43121CAA59E700EF4C2D /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 802E43111CAA59E700EF4C2D /* NewsCell.m */; };
 		AA6499F5169AFEB09DCE0436 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9DAAC788BC440001B8948D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +34,12 @@
 		8005B9CC1CA7B9BF0025FAE9 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		8005B9CE1CA7C1740025FAE9 /* NewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
 		8005B9CF1CA7C1740025FAE9 /* NewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsModel.m; sourceTree = "<group>"; };
+		8005B9D11CA9219B0025FAE9 /* NetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTools.h; sourceTree = "<group>"; };
+		8005B9D21CA9219B0025FAE9 /* NetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTools.m; sourceTree = "<group>"; };
+		8005B9D41CA92EE00025FAE9 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		8005B9D51CA92EE00025FAE9 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		802E43101CAA59E700EF4C2D /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
+		802E43111CAA59E700EF4C2D /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
 		C65271DA232CC58D8F751BB5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EC9DAAC788BC440001B8948D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -112,6 +121,8 @@
 				8005B9CC1CA7B9BF0025FAE9 /* News.storyboard */,
 				8005B9C91CA7B9910025FAE9 /* NewsTableViewController.h */,
 				8005B9CA1CA7B9910025FAE9 /* NewsTableViewController.m */,
+				802E43101CAA59E700EF4C2D /* NewsCell.h */,
+				802E43111CAA59E700EF4C2D /* NewsCell.m */,
 				8005B9CE1CA7C1740025FAE9 /* NewsModel.h */,
 				8005B9CF1CA7C1740025FAE9 /* NewsModel.m */,
 			);
@@ -121,6 +132,9 @@
 		8005B9C71CA7B9490025FAE9 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				8005B9D61CA92EE00025FAE9 /* Log */,
+				8005B9D11CA9219B0025FAE9 /* NetworkTools.h */,
+				8005B9D21CA9219B0025FAE9 /* NetworkTools.m */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -130,6 +144,16 @@
 			children = (
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		8005B9D61CA92EE00025FAE9 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				8005B9D41CA92EE00025FAE9 /* NSArray+Log.h */,
+				8005B9D51CA92EE00025FAE9 /* NSArray+Log.m */,
+			);
+			name = Log;
+			path = "../../../../刀哥分享/第09天实战-网易新闻/资料。/代码/04-NeteaseNews-自定义cell/新闻/新闻/Classes/Tools/Log";
 			sourceTree = "<group>";
 		};
 		8F5857999C98E8C971CF9A32 /* Frameworks */ = {
@@ -264,6 +288,9 @@
 			files = (
 				8005B9D01CA7C1740025FAE9 /* NewsModel.m in Sources */,
 				8005B9CB1CA7B9910025FAE9 /* NewsTableViewController.m in Sources */,
+				8005B9D31CA9219B0025FAE9 /* NetworkTools.m in Sources */,
+				802E43121CAA59E700EF4C2D /* NewsCell.m in Sources */,
+				8005B9D71CA92EE00025FAE9 /* NSArray+Log.m in Sources */,
 				8005B9B21CA6DA350025FAE9 /* AppDelegate.m in Sources */,
 				8005B9AF1CA6DA350025FAE9 /* main.m in Sources */,
 			);

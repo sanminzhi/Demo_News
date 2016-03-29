@@ -12,10 +12,13 @@
 //主标题
 @property(nonatomic,copy) NSString* title;
 //跟帖数
-@property(nonatomic,strong) NSNumber* replyCount;
+@property(nonatomic,assign)int replyCount;
 //摘要
 @property(nonatomic,copy) NSString* digest;
 //图片链接
 @property(nonatomic,copy) NSString* imgsrc;
+//字典转模型方法
 +(instancetype)newsModelWithDict:(NSDictionary *)dict;
+//加载指定网路数据方法
++(void)loadNewsListWithURLString:(NSString *)urlString finished:(void(^)(NSArray *newList))finished; 
 @end
