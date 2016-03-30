@@ -17,6 +17,12 @@
 @property(nonatomic,copy) NSString* digest;
 //图片链接
 @property(nonatomic,copy) NSString* imgsrc;
+//来源
+@property(nonatomic,copy) NSString * source;
+//多图模式的存储图片的数组（两张）
+@property(nonatomic,strong)NSArray * imgextra;
+//判断是否为大图
+@property(nonatomic,assign,getter=isBigImage)BOOL imgType;
 //字典转模型方法
 +(instancetype)newsModelWithDict:(NSDictionary *)dict;
 //加载指定网路数据方法

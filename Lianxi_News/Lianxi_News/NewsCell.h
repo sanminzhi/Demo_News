@@ -10,4 +10,7 @@
 @class NewsModel;
 @interface NewsCell : UITableViewCell
 @property(nonatomic,strong) NewsModel *model;
+
+// 可重用标示符号
++ (NSString *)cellIdentifier:(NewsModel *)news;
 @end

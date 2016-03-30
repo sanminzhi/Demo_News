@@ -40,6 +40,7 @@
           [tempArray addObject:model];
       }
       finished(tempArray.copy);
+      
   } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
       NSLog(@"失败了");
       NSLog(@"%@",error);
